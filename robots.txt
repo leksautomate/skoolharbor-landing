@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://leksautomate.github.io/skoolharbor-landing/sitemap.xml

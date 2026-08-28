@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Guide — How to Use skoolHarbor</title>
+<meta name="description" content="Step-by-step guide to downloading videos with skoolHarbor: detecting a video, building the list across lesson pages, choosing quality, batch downloads, and the yt-dlp tip for embedded YouTube." />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<link rel="canonical" href="https://leksautomate.github.io/skoolharbor-landing/guide.html" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<meta name="theme-color" content="#0f1013" />
+<meta name="color-scheme" content="dark" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="skoolHarbor" />
+<meta property="og:url" content="https://leksautomate.github.io/skoolharbor-landing/guide.html" />
+<meta property="og:title" content="Guide — How to Use skoolHarbor" />
+<meta property="og:description" content="Detect a video, build the list across lesson pages, choose quality, batch download, and handle embedded YouTube with yt-dlp." />
+<meta property="og:image" content="https://leksautomate.github.io/skoolharbor-landing/assets/og.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://leksautomate.github.io/skoolharbor-landing/assets/og.png" />
+<link rel="stylesheet" href="assets/styles.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to download a video with skoolHarbor",
+  "description": "Detect and save a Skool, Vimeo, Loom or Wistia video as a single MP4 using the skoolHarbor browser extension.",
+  "step": [
+    { "@type": "HowToStep", "name": "Open the page", "text": "Open the Skool lesson, or the Vimeo, Loom or Wistia page that has the video." },
+    { "@type": "HowToStep", "name": "Play the video", "text": "Start playback so the player loads its stream. skoolHarbor detects it and adds it to the list." },
+    { "@type": "HowToStep", "name": "Open the popup", "text": "Click the skoolHarbor toolbar icon to see every video found so far." },
+    { "@type": "HowToStep", "name": "Choose quality and select", "text": "Pick a resolution where offered and tick the videos you want." },
+    { "@type": "HowToStep", "name": "Download Selected", "text": "Click Download Selected. Each video is stitched into one MP4 in the browser and saved to your downloads folder." }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://leksautomate.github.io/skoolharbor-landing/" },
+    { "@type": "ListItem", "position": 2, "name": "Guide", "item": "https://leksautomate.github.io/skoolharbor-landing/guide.html" }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="22" fill="#16171b"/><g fill="none" stroke="#5cb8e6" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><circle cx="50" cy="26" r="7"/><path d="M50 33 V78"/><path d="M34 45 H66"/><path d="M24 55 a26 26 0 0 0 52 0"/><path d="M24 55 l-8 4 M24 55 l2 -9"/><path d="M76 55 l8 4 M76 55 l-2 -9"/></g></svg>
+      skoolHarbor
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="releases.html">Releases</a>
+      <a href="https://github.com/leksautomate/skoolharbor-landing" rel="noopener">GitHub</a>
+      <a class="btn sm nav-cta" href="https://chromewebstore.google.com/detail/skool-harbor-downloader-f/fhoogeolhbimpdajjefikfmajlcgknoc" rel="noopener">Add to Chrome</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="wrap">
+      <article class="prose">
+        <nav aria-label="Breadcrumb" class="muted" style="font-size:13px;margin-bottom:14px"><a href="./">Home</a> / Guide</nav>
+        <h1>How to use skoolHarbor</h1>
+        <p class="updated">Applies to version 1.3.0 · Chrome &amp; Firefox</p>
+
+        <h2>1. Install and pin the extension</h2>
+        <p>Add skoolHarbor from the <a href="https://chromewebstore.google.com/detail/skool-harbor-downloader-f/fhoogeolhbimpdajjefikfmajlcgknoc" rel="noopener">Chrome Web Store</a> or <a href="https://addons.mozilla.org/en-US/firefox/addon/skool-harbor-skool-downloader/" rel="noopener">Firefox Add-ons</a>. Pin the icon to your toolbar so it is one click away while you work through a course.</p>
+        <p>On first run you will be asked to start the free trial (3 downloads) or sign in as an existing user. No credit card is required for the trial — it is handled by ExtensionPay.</p>
+
+        <h2>2. Open a lesson and play the video</h2>
+        <p>Navigate to a Skool lesson or post, or a Vimeo, Loom or Wistia page. Press play. The extension watches the network for the video manifest, so the stream has to actually start loading before it can be detected.</p>
+        <div class="callout">If nothing appears, let the video buffer for a second or two, then reopen the popup. On Skool, some lessons load the player only after you scroll it into view.</div>
+
+        <h2>3. Build the list as you browse</h2>
+        <p>Every video skoolHarbor detects is added to a list that <strong>persists as you move between lesson pages</strong>. Open several lessons in a module, let each player start, and the popup will show all of them together. Use <em>Clear List</em> in the popup header to start fresh.</p>
+
+        <h2>4. Choose quality</h2>
+        <p>When a source offers multiple renditions (common on Vimeo and Skool's CDN), each list entry has a quality selector. Pick the resolution you want before downloading. If only one rendition exists, the selector is fixed to that.</p>
+
+        <h2>5. Select and download</h2>
+        <ul>
+          <li>Tick the checkbox on each video you want, or use <em>Select All</em>.</li>
+          <li>Click <strong>Download Selected</strong>.</li>
+          <li>skoolHarbor fetches the HLS segments, muxes them into a single MP4 in the browser, and hands the finished file to your browser's download manager.</li>
+          <li>A combined progress bar shows the queue status. Use <em>Cancel Queue</em> to stop remaining items.</li>
+        </ul>
+        <div class="callout">Downloads run one at a time by design — muxing a long lesson video is CPU and memory work, and serialising it keeps large batches stable.</div>
+
+        <h2>6. Embedded YouTube videos</h2>
+        <p>YouTube clips embedded in Skool lessons are listed too, but they are not downloaded through the browser. Instead skoolHarbor gives you a ready-to-copy <a href="https://github.com/yt-dlp/yt-dlp" rel="noopener">yt-dlp</a> command:</p>
+        <pre><code>yt-dlp -f "bv*+ba/b" "https://www.youtube.com/watch?v=VIDEO_ID"</code></pre>
+        <p>Paste it into a terminal where <code>yt-dlp</code> is installed. This keeps skoolHarbor's in-browser downloader focused on the streaming hosts it handles natively.</p>
+
+        <h2>Redeeming an AppSumo code</h2>
+        <ol>
+          <li>Open the popup. If you are not already premium, an <em>Have an AppSumo code?</em> button appears.</li>
+          <li>Click it, paste your code (format <code>SKOO-XXXX-XXXX-XXXX</code>), and press <em>Redeem</em>.</li>
+          <li>The code activates on that browser immediately — no account, no separate login.</li>
+        </ol>
+
+        <h2>Troubleshooting</h2>
+        <table>
+          <thead><tr><th>Symptom</th><th>Fix</th></tr></thead>
+          <tbody>
+            <tr><td>No video detected</td><td>Make sure playback actually started. Reload the page, play again, reopen the popup.</td></tr>
+            <tr><td>Download stalls near the end</td><td>Long videos need memory to mux. Close other heavy tabs and retry that single item.</td></tr>
+            <tr><td>Quality list only shows one option</td><td>That source only publishes one rendition. Nothing to change.</td></tr>
+            <tr><td>Trial status not updating</td><td>Open the popup, use <em>Sign In / Existing User</em> to re-sync with ExtensionPay.</td></tr>
+            <tr><td>Skool CDN video fails</td><td>Skool occasionally rotates its CDN headers. Update to the latest version — see <a href="releases.html">Releases</a>.</td></tr>
+          </tbody>
+        </table>
+
+        <hr class="rule" />
+        <p class="muted">Still stuck? Open an issue on <a href="https://github.com/leksautomate/skoolharbor-landing" rel="noopener">GitHub</a>.</p>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <a class="brand" href="./"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="22" fill="#16171b"/><g fill="none" stroke="#5cb8e6" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><circle cx="50" cy="26" r="7"/><path d="M50 33 V78"/><path d="M34 45 H66"/><path d="M24 55 a26 26 0 0 0 52 0"/><path d="M24 55 l-8 4 M24 55 l2 -9"/><path d="M76 55 l8 4 M76 55 l-2 -9"/></g></svg> skoolHarbor</a>
+      </div>
+      <div><h4>Product</h4><a href="index.html#features">Features</a><a href="index.html#pricing">Pricing</a><a href="guide.html">Guide</a><a href="releases.html">Releases</a></div>
+      <div><h4>Get it</h4><a href="https://chromewebstore.google.com/detail/skool-harbor-downloader-f/fhoogeolhbimpdajjefikfmajlcgknoc" rel="noopener">Chrome Web Store</a><a href="https://addons.mozilla.org/en-US/firefox/addon/skool-harbor-skool-downloader/" rel="noopener">Firefox Add-ons</a><a href="https://github.com/leksautomate/skoolharbor-landing" rel="noopener">Source on GitHub</a></div>
+      <div><h4>Legal</h4><a href="privacy.html">Privacy Policy</a><a href="refund.html">Refund Policy</a><a href="index.html#terms">Terms of use</a></div>
+    </div>
+    <p class="fine">Not affiliated with, endorsed by, or sponsored by Skool, Vimeo, Loom, Wistia, or YouTube. Download only content you are entitled to save. &copy; <span id="yr">2026</span> leksautomate.</p>
+  </div>
+</footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Releases — skoolHarbor</title>
+<meta name="description" content="What's shipped in skoolHarbor and what's on the roadmap. Current release: version 1.3.0 for Chrome and Firefox." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://leksautomate.github.io/skoolharbor-landing/releases.html" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<meta name="theme-color" content="#0f1013" />
+<meta name="color-scheme" content="dark" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="skoolHarbor" />
+<meta property="og:url" content="https://leksautomate.github.io/skoolharbor-landing/releases.html" />
+<meta property="og:title" content="Releases — skoolHarbor" />
+<meta property="og:description" content="What's shipped in skoolHarbor and what's on the roadmap." />
+<meta property="og:image" content="https://leksautomate.github.io/skoolharbor-landing/assets/og.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://leksautomate.github.io/skoolharbor-landing/assets/og.png" />
+<link rel="stylesheet" href="assets/styles.css" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://leksautomate.github.io/skoolharbor-landing/" },
+    { "@type": "ListItem", "position": 2, "name": "Releases", "item": "https://leksautomate.github.io/skoolharbor-landing/releases.html" }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="22" fill="#16171b"/><g fill="none" stroke="#5cb8e6" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><circle cx="50" cy="26" r="7"/><path d="M50 33 V78"/><path d="M34 45 H66"/><path d="M24 55 a26 26 0 0 0 52 0"/><path d="M24 55 l-8 4 M24 55 l2 -9"/><path d="M76 55 l8 4 M76 55 l-2 -9"/></g></svg>
+      skoolHarbor
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html#features">Features</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="guide.html">Guide</a>
+      <a href="https://github.com/leksautomate/skoolharbor-landing" rel="noopener">GitHub</a>
+      <a class="btn sm nav-cta" href="https://chromewebstore.google.com/detail/skool-harbor-downloader-f/fhoogeolhbimpdajjefikfmajlcgknoc" rel="noopener">Add to Chrome</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="wrap">
+      <article class="prose">
+        <nav aria-label="Breadcrumb" class="muted" style="font-size:13px;margin-bottom:14px"><a href="./">Home</a> / Releases</nav>
+        <h1>Releases</h1>
+        <p class="updated">Latest: <strong>v1.3.0</strong> — Chrome Web Store &amp; Firefox Add-ons</p>
+
+        <h2>v1.3.0 — current</h2>
+        <ul>
+          <li><strong>Firefox port.</strong> Full Manifest V3 build for Firefox 142+, published on addons.mozilla.org alongside the Chrome release.</li>
+          <li><strong>AppSumo code redemption</strong> built into the popup — activate a lifetime code on the browser directly, no account.</li>
+          <li>Review prompt shown once after your first successful download or a week after install.</li>
+          <li>Hardened Skool video-CDN request headers for more reliable detection on native lessons.</li>
+          <li>Accessibility and content-security-policy fixes for add-on store review.</li>
+        </ul>
+
+        <h2>Earlier</h2>
+        <h3>Detection &amp; download core</h3>
+        <ul>
+          <li>Per-site detectors for Skool (native player + <code>video.skool.com</code> CDN), Vimeo, Loom and Wistia.</li>
+          <li>HLS (<code>.m3u8</code>) parsing with per-rendition quality selection.</li>
+          <li>In-browser muxing of HLS segments into a single MP4 — no server, no ffmpeg install.</li>
+          <li>Detected-video list that persists across lesson pages, with <em>Clear List</em>.</li>
+          <li>Batch selection and a serial download queue with combined progress and <em>Cancel Queue</em>.</li>
+          <li>Embedded-YouTube surfacing with a ready-to-copy <code>yt-dlp</code> command.</li>
+        </ul>
+        <h3>Licensing</h3>
+        <ul>
+          <li>3-download free trial via ExtensionPay, with email registration and trial-status display.</li>
+          <li>Monthly, yearly and lifetime plans through ExtensionPay / Stripe checkout.</li>
+          <li>Manage / cancel link surfaced in the popup for active subscribers.</li>
+        </ul>
+
+        <h2>Roadmap</h2>
+        <div class="callout">Directional, not a commitment — order and scope may change.</div>
+        <ul>
+          <li>Auto-advance through a Skool module, collecting every lesson video without manual page-by-page play.</li>
+          <li>Optional per-download subtitle/caption fetch where the host exposes one.</li>
+          <li>Configurable filename templates (course / module / lesson).</li>
+          <li>Retry-failed-items action on the queue.</li>
+        </ul>
+
+        <hr class="rule" />
+        <p class="muted">Install or update from the <a href="https://chromewebstore.google.com/detail/skool-harbor-downloader-f/fhoogeolhbimpdajjefikfmajlcgknoc" rel="noopener">Chrome Web Store</a> or <a href="https://addons.mozilla.org/en-US/firefox/addon/skool-harbor-skool-downloader/" rel="noopener">Firefox Add-ons</a>.</p>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="cols">
+      <div><a class="brand" href="./"><svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="22" fill="#16171b"/><g fill="none" stroke="#5cb8e6" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"><circle cx="50" cy="26" r="7"/><path d="M50 33 V78"/><path d="M34 45 H66"/><path d="M24 55 a26 26 0 0 0 52 0"/><path d="M24 55 l-8 4 M24 55 l2 -9"/><path d="M76 55 l8 4 M76 55 l-2 -9"/></g></svg> skoolHarbor</a></div>
+      <div><h4>Product</h4><a href="index.html#features">Features</a><a href="index.html#pricing">Pricing</a><a href="guide.html">Guide</a><a href="releases.html">Releases</a></div>
+      <div><h4>Get it</h4><a href="https://chromewebstore.google.com/detail/skool-harbor-downloader-f/fhoogeolhbimpdajjefikfmajlcgknoc" rel="noopener">Chrome Web Store</a><a href="https://addons.mozilla.org/en-US/firefox/addon/skool-harbor-skool-downloader/" rel="noopener">Firefox Add-ons</a><a href="https://github.com/leksautomate/skoolharbor-landing" rel="noopener">Source on GitHub</a></div>
+      <div><h4>Legal</h4><a href="privacy.html">Privacy Policy</a><a href="refund.html">Refund Policy</a><a href="index.html#terms">Terms of use</a></div>
+    </div>
+    <p class="fine">Not affiliated with, endorsed by, or sponsored by Skool, Vimeo, Loom, Wistia, or YouTube. Download only content you are entitled to save. &copy; <span id="yr">2026</span> leksautomate.</p>
+  </div>
+</footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+# skoolHarbor
+
+> skoolHarbor (store name: "skool Harbor: Downloader For Skool") is a Chrome (Manifest V3) and Firefox browser extension that detects the video on a Skool lesson, Vimeo, Loom or Wistia page you are viewing and downloads it as a single MP4. Fragmented HLS streams are fetched segment by segment and muxed into one playable file entirely in the browser — no server, no ffmpeg install, no paste-a-URL website. It does not decrypt or circumvent DRM, bypass paywalls, or grant access to anything that does not already play in your browser.
+
+Play or load a video so the player fetches its stream; skoolHarbor detects it and adds it to a list that persists as you move between lesson pages. Open the toolbar popup, choose a rendition where multiple qualities are offered, tick the videos you want, and click Download Selected. Videos download one at a time through a queue with combined progress. YouTube videos embedded in Skool lessons are surfaced with a ready-to-copy yt-dlp command instead of being downloaded in-browser.
+
+## Pages
+
+- [Home](https://leksautomate.github.io/skoolharbor-landing/index.html): Overview, feature list, how it works, pricing, FAQ, and terms of use.
+- [Guide](https://leksautomate.github.io/skoolharbor-landing/guide.html): Step-by-step usage — detection, building the list across pages, quality selection, batch downloads, the yt-dlp tip for embedded YouTube, AppSumo code redemption, and troubleshooting.
+- [Releases](https://leksautomate.github.io/skoolharbor-landing/releases.html): What is shipped in v1.3.0 and what is on the roadmap.
+
+## Policies
+
+- [Privacy Policy](https://leksautomate.github.io/skoolharbor-landing/privacy.html): All video detection and downloading happens locally in the browser. The only data transmitted is your email address, sent to ExtensionPay for licensing if you register beyond the free trial. No analytics, no tracking, no browsing history collected.
+- [Refund Policy](https://leksautomate.github.io/skoolharbor-landing/refund.html): 14-day window and the conditions a refund request must meet. AppSumo-code licenses follow AppSumo's own refund policy.
+
+## Pricing
+
+- Free trial: first 3 downloads, no credit card.
+- Monthly: $7.99 / month.
+- Yearly: $69.99 / year.
+- Lifetime: $199 one-time.
+- Billing and licensing handled by ExtensionPay (Stripe). AppSumo lifetime codes redeem directly in the popup.
+
+## Install
+
+- Chrome Web Store: https://chromewebstore.google.com/detail/skool-harbor-downloader-f/fhoogeolhbimpdajjefikfmajlcgknoc
+- Firefox Add-ons: https://addons.mozilla.org/en-US/firefox/addon/skool-harbor-skool-downloader/
+
+## Notes
+
+- Supported sites: Skool (native player and video.skool.com CDN), Vimeo, Loom, Wistia. YouTube is link-surfacing only.
+- Source for this site: https://github.com/leksautomate/skoolharbor-landing
+- Not affiliated with, endorsed by, or sponsored by Skool, Vimeo, Loom, Wistia, or YouTube. All trademarks belong to their respective owners.
+- Download only content you are entitled to save.
